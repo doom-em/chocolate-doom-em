@@ -33,7 +33,10 @@ jobs:
             libpng-dev \
             libsamplerate0-dev \
             libfluidsynth-dev
-
+            
+      - name: Setup Emscripten toolchain
+        uses: mymindstorm/setup-emsdk@v14
+        
       - uses: actions/checkout@v4
         with:
           submodules: true
