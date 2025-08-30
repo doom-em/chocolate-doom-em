@@ -33,10 +33,10 @@ jobs:
             libpng-dev \
             libsamplerate0-dev \
             libfluidsynth-dev
-            
+
       - name: Setup Emscripten toolchain
         uses: mymindstorm/setup-emsdk@v14
-        
+
       - uses: actions/checkout@v4
         with:
           submodules: true
@@ -45,7 +45,7 @@ jobs:
         run: emconfigure ./autogen.sh
 
       - name: Build
-        run: emmake make -j4
+        run: export ROOTPROJDIR="$PWD"; emmake make -j4 LDFLAGS="--preload-file \"$ROOTPROJDIR/wads/doom1.wad\"@doom1.wad"
 
       - name: Upload engine (artifacts)
         uses: actions/upload-artifact@v4
