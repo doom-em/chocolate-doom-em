@@ -57,6 +57,8 @@ jobs:
             ./src/chocolate-doom.js
   download:
     needs: build
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
