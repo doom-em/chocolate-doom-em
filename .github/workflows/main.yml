@@ -55,6 +55,7 @@ jobs:
             ./src/chocolate-doom.html
             ./src/chocolate-doom.wasm
             ./src/chocolate-doom.js
+            ./src/chocolate-doom.data
   download:
     needs: build
     permissions:
