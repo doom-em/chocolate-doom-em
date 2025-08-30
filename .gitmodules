@@ -1,6 +1,0 @@
-[submodule "quickcheck"]
-	path = quickcheck
-	url = https://github.com/chocolate-doom/quickcheck.git
-[submodule "wads"]
-	path = wads
-	url = https://github.com/doom-em/wads
