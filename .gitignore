@@ -52,6 +52,11 @@ STRIFE*.pcx
 .*.swp
 .DS_store
 
+# Emscripten's compiled binaries. Thanks for just leaving them anywhere, autotools.
+*.wasm
+*.html
+*.js
+
 # Ignore GNU Global tags and html files
 GPATH
 GRTAGS
