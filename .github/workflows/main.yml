@@ -76,9 +76,9 @@ jobs:
     - name: Uglify JS for faster runtime (probably)
       run: |
           npm install uglify-js -g
-          uglifyjs chocolate_doom.js -c > chocolate_doom.js.min
-          rm chocolate_doom.js
-          mv chocolate_doom.js.min chocolate_doom.js
+          uglifyjs chocolate-doom.js -c > chocolate-doom.js.min
+          rm chocolate-doom.js
+          mv chocolate-doom.js.min chocolate-doom.js
     - name: Push to GH Pages
       run: |
           git config user.name "github-actions[bot]"
